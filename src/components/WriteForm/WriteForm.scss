@@ -1,0 +1,28 @@
+.write_form_area {
+  display: flex;
+  position: relative;
+  background: #fff;
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    content: '';
+  }
+  .input_text {
+    flex: 1;
+    height: 50px;
+    padding: 0 18px;
+    border: 0;
+    font-size: 1.5rem;
+  }
+  .btn {
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    color: #03c75a;
+    border: 0;
+    background: none;
+  }
+}

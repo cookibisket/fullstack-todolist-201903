@@ -1,0 +1,25 @@
+.todolist_area {
+  background: #fff;
+}
+
+.list_todolist {
+  .list_item {
+    padding: 15px 18px 14px;
+    & + .list_item {
+      border-top: 1px solid #ecf0f2;
+    }
+  }
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #242424;
+    line-height: 2.4rem;
+  }
+}
+
+.nodata_area {
+  padding: 50px 0;
+  font-size: 1.5rem;
+  color: #8f8f8f;
+  text-align: center;
+}
