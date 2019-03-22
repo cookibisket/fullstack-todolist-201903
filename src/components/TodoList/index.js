@@ -5,10 +5,10 @@ const TodoList = ({ todos }) => {
   return (
     <div className='todolist_area'>
       <ul className='list_todolist'>
-        {todos.map(todos => {
+        {todos.map(todo => {
           return (
-            <li className='list_item'>
-              <div className='title'>{todos}</div>
+            <li className='list_item' key={todo.id}>
+              <div className='title'>{todo.text}</div>
             </li>
           )
         })}
