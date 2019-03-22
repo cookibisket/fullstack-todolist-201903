@@ -9,20 +9,20 @@ import TodoList from '../../components/TodoList'
 
 class TodoListPage extends Component {
   state = {
-    todos: ''
+    todos: []
   }
 
   handleCreate = (text) => {
-    console.log('버튼을 누르면 실행되는 함수', text)
     const { todos } = this.state
+    console.log('버튼을 누르면 실행되는 함수', todos.concat(text))
     this.setState({
-      todos: text
+      todos: todos.concat(text)
     })
   }
 
   render () {
     const { todos } = this.state
-    
+
     return (
       <div>
         <Header />
