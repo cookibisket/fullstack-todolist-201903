@@ -7,7 +7,13 @@ class WriteForm extends Component {
   handleSubmit = () => {
     const { onCreate } = this.props
     const text = this.inputRef.current.value
-    onCreate(text)
+    if(text.trim() !== '') {
+      onCreate(text)
+      this.inputRef.current.value = ''
+      this.inputRef.current.focus()
+    } else {
+      alert('할 일을 입력해주세요')
+    }
   }
 
   render () {
