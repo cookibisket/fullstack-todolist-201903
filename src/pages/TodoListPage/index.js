@@ -16,8 +16,10 @@ class TodoListPage extends Component {
 
   handleCreate = (text) => {
     const { todos } = this.state
+    const newTodos = todos.concat({ id: this.id++, text: text })
+    
     this.setState({
-      todos: todos.concat({ id: this.id++, text: text })
+      todos: newTodos
     })
   }
 
