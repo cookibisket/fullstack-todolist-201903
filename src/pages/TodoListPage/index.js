@@ -23,6 +23,15 @@ class TodoListPage extends Component {
     })
   }
 
+  handleDelete = (id) => {
+    const { todos } = this.state
+    const newTodos = todos.filter(todo => todo.id !== id)// 현재 id값이 아니면 새로운 배열 newTodos에 담아라.
+
+    this.setState({
+      todos: newTodos
+    })
+  }
+
   render () {
     const { todos } = this.state
 
@@ -31,7 +40,7 @@ class TodoListPage extends Component {
         <Header />
         <div className='content'>
           <WriteForm onCreate={this.handleCreate}/>
-          <TodoList todos={todos} />
+          <TodoList todos={todos} onDelete={this.handleDelete}/>
         </div>
         <Footer />
       </div>
