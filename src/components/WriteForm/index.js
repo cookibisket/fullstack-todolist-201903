@@ -16,6 +16,10 @@ class WriteForm extends Component {
     }
   }
 
+  handleKeyPress = (e) => {
+    if (e.key ==='Enter') this.handleSubmit()
+  }
+
   render () {
     
     return (
@@ -26,6 +30,7 @@ class WriteForm extends Component {
           className='input_text' 
           placeholder='할 일을 적어주세요' 
           ref={this.inputRef}
+          onKeyPress={this.handleKeyPress}
         />
         <button type='button' className='btn' onClick={this.handleSubmit}>등록</button>
       </div>
